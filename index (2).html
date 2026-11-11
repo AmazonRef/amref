@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Style &amp; Beauty Picks</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1ee;--surface:#fff;--ink:#1d1a1f;--muted:#645d68;--line:#e4dcd8;--accent:#b0245a;--accent-ink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17131a;--surface:#221c27;--ink:#f3eef5;--muted:#a99fb0;--line:#35293b;--accent:#ff7aa9;--accent-ink:#2a0816;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17131a;--surface:#221c27;--ink:#f3eef5;--muted:#a99fb0;--line:#35293b;--accent:#ff7aa9;--accent-ink:#2a0816;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+.note{background:var(--ink);color:var(--bg);font-size:13px;padding:8px 0}
+.hero{min-height:70vh;display:flex;align-items:center;padding:64px 0}
+h1{font-weight:800;font-size:clamp(2.6rem,9vw,6rem);line-height:.98;letter-spacing:-.04em;margin:0 0 20px;max-width:11ch}
+.hero p{max-width:46ch;color:var(--muted);font-size:1.15rem;margin:0 0 28px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:13px 22px;border-radius:999px}
+.btn:hover{filter:brightness(1.1)}
+.hero .wrap{width:100%}
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.give{background:var(--surface);border:2px solid var(--accent);border-radius:20px;padding:22px;text-align:center}
+.give .tag{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:13px;padding:4px 14px;border-radius:999px;margin-bottom:10px}
+.give h2{font-size:1.5rem;line-height:1.15;letter-spacing:-.02em;margin:0 0 6px;font-weight:800}
+.give p{color:var(--muted);font-size:.95rem;line-height:1.45;margin:0 0 14px}
+.give .btn{display:block}
+.give small{display:block;color:var(--muted);font-size:11px;line-height:1.4;margin-top:10px}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.hero{min-height:0}}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* ---- Outfit layout: women = columns 1-2, men = columns 3-4 ---- */
+.sides{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-bottom:56px}
+.side-title{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:0 0 20px;padding-bottom:10px;border-bottom:2px solid var(--accent)}
+.look{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;align-items:start}
+.combo{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+.combo h3{margin:0 0 4px;font-size:1.1rem;font-weight:800;line-height:1.25}
+.combo .sub{color:var(--muted);font-size:.85rem;margin:0 0 6px}
+.part{display:grid;grid-template-columns:112px minmax(0,1fr);gap:10px 12px;align-items:center;padding:14px 0;border-top:1px solid var(--line)}
+.thumb{position:relative;width:112px;height:112px;border-radius:16px;display:grid;place-items:center;font-size:70px;line-height:1;overflow:hidden}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
+.part-name{font-weight:600;font-size:1rem;line-height:1.25;overflow-wrap:anywhere}
+.part .btn{grid-column:1/-1;text-align:center;padding:9px 14px;font-size:.9rem}
+.photo{position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:44px;text-align:center}
+.photo small{font-size:11px;color:var(--muted);padding:0 10px;line-height:1.3}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* Blinking offer badge */
+.price{
+  display:inline-flex;align-items:center;gap:5px;align-self:flex-start;justify-self:start;
+  background:linear-gradient(135deg,#ff3d3d,#ff8a00);color:#fff;
+  font-weight:800;font-size:.8rem;letter-spacing:.03em;
+  padding:3px 11px;border-radius:999px;margin-top:4px;
+  animation:blink 1s ease-in-out infinite, glow 1.6s ease-out infinite;
+}
+.price::before{content:"🔥"}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(255,61,61,.6)}70%,100%{box-shadow:0 0 0 10px rgba(255,61,61,0)}}
+@media (prefers-reduced-motion:reduce){.price{animation:none}}
+
+footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:13px}
+@media (max-width:1020px){.sides{grid-template-columns:1fr;gap:48px}}
+@media (max-width:560px){.look{grid-template-columns:1fr}.photo{aspect-ratio:4/5}}
+</style>
+</head>
+<body>
+<div class="note"><div class="wrap"><strong>Disclosure:</strong> As an Amazon Associate we earn from qualifying purchases. Links are affiliate links; product prices and availability may change at any time on Amazon. Please check the latest price on Amazon before placing your order.</div></div>
+
+<header class="hero"><div class="wrap hero-grid"><div class="hero-text">
+<h1>Outfits that actually match.</h1>
+<p>Not sure what goes with what? Pick a ready-made combination of top, bottom and shoes for women or men, see how it looks when worn, and buy each piece on Amazon.</p>
+<a class="btn" href="#picks">See the outfits</a>
+</div>
+<aside class="give" aria-label="Giveaway">
+<span class="tag">Free giveaway</span>
+<h2>Win a Samsung Galaxy S25</h2>
+<p>Register for free for a chance to win. One winner will be picked.</p>
+<a class="btn" id="giveLink"
+   href="https://docs.google.com/forms/d/e/1FAIpQLSczGAMENYFOCSF_-2uID2FxdBY8v13mkTPIyCv-VW9qGx4qnw/viewform"
+   target="_blank"
+   rel="noopener noreferrer">
+   Click to Register
+</a>
+<small>Note:
+The giveaway winner will be announced once we reach our target.
+
+Stay updated and don't miss the announcement!
+
+No purchase necessary to participate. Not sponsored by or affiliated with Samsung or Amazon.</small>
+</aside>
+</div></header>
+
+<main class="wrap sides" id="picks"></main>
+
+<footer><div class="wrap">Prices and availability change on Amazon, so check the product page before you buy. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</div></footer>
+
+<script>
+/* ===== EDIT THESE ===== */
+const AMAZON_DOMAIN = "www.amazon.in";
+const AFFILIATE_TAG = "yourtag-21";   // your Amazon Associates tracking ID
+const GIVEAWAY_URL = "https://docs.google.com/forms/d/e/1FAIpQLSczGAMENYFOCSF_-2uID2FxdBY8v13mkTPIyCv-VW9qGx4qnw/viewform";
+
+/* Each OUTFIT (look) has:
+     name  = outfit title            note = one-line styling tip
+     img   = photo of a person wearing the whole combination (e.g. "images/women-1.jpg")
+     bg    = placeholder colour shown until the photo loads / if it is missing
+     parts = 2 or more products that make the combination (shirt, pant, shoes...)
+   Each PART has:
+     title, emoji, offer ("30% OFF")
+     url  = your affiliate link (best option)   asin = or the 10-character product code
+     img  = optional small product photo (leave "" to show the emoji)
+   Women's looks fill columns 1-2, men's looks fill columns 3-4.
+   To add another outfit, copy one {...} block inside "looks". */
+const OUTFITS = {
+  women: { title:"Women", looks:[
+    { name:"Brunch casual", note:"Light, easy and comfortable all day.", img:"images/women-1.jpg", bg:"#f6d8e2",
+      parts:[
+        {title:"Floral Wrap Top",       emoji:"👚", offer:"30% OFF", url:"", asin:"", img:"images/1.png"},
+        {title:"High-Waist Blue Jeans", emoji:"👖", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"White Sneakers",        emoji:"👟", offer:"30% OFF", url:"", asin:"", img:""}
+      ]},
+    { name:"Office ready", note:"Neutral tones that always work together.", img:"images/women-2.jpg", bg:"#f0dcff",
+      parts:[
+        {title:"Linen Button-Up Shirt", emoji:"👚", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Straight Trousers",     emoji:"👖", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Block Heel Sandals",    emoji:"👡", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Leather Tote Handbag",  emoji:"👜", offer:"30% OFF", url:"", asin:"", img:""}
+      ]},
+    { name:"Festive kurta look", note:"Traditional and dressy for functions.", img:"images/women-3.jpg", bg:"#d9efe4",
+      parts:[
+        {title:"Cotton Kurta Set",         emoji:"👗", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Sterling Silver Earrings", emoji:"💎", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Embellished Flats",        emoji:"🥿", offer:"30% OFF", url:"", asin:"", img:""}
+      ]}
+  ]},
+  men: { title:"Men", looks:[
+    { name:"Smart casual", note:"Sharp enough for work, relaxed enough for dinner.", img:"images/men-1.jpg", bg:"#d6e4ff",
+      parts:[
+        {title:"Oxford Cotton Shirt", emoji:"👔", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Slim-Fit Chinos",     emoji:"👖", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Brown Leather Loafers", emoji:"👞", offer:"30% OFF", url:"", asin:"", img:""}
+      ]},
+    { name:"Weekend street", note:"Comfortable layers for outings.", img:"images/men-2.jpg", bg:"#ffe1d4",
+      parts:[
+        {title:"Graphic Cotton T-Shirt", emoji:"👕", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Denim Jacket",           emoji:"🧥", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Running Shoes",          emoji:"👟", offer:"30% OFF", url:"", asin:"", img:""}
+      ]},
+    { name:"Formal evening", note:"A classic combination for events.", img:"images/men-3.jpg", bg:"#d8e0f0",
+      parts:[
+        {title:"White Formal Shirt",       emoji:"👔", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Charcoal Formal Trousers", emoji:"👖", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Black Derby Shoes",        emoji:"👞", offer:"30% OFF", url:"", asin:"", img:""},
+        {title:"Analog Chronograph Watch", emoji:"⌚", offer:"30% OFF", url:"", asin:"", img:""}
+      ]}
+  ]}
+};
+/* ====================== */
+
+const link = p => p.url || (p.asin
+  ? `https://${AMAZON_DOMAIN}/dp/${p.asin}?tag=${AFFILIATE_TAG}`
+  : `https://${AMAZON_DOMAIN}/s?k=${encodeURIComponent(p.title)}&tag=${AFFILIATE_TAG}`);
+const esc = s => String(s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+
+const partHTML = (p, bg) => `
+  <div class="part">
+    <div class="thumb" style="background:${bg}"><span aria-hidden="true">${p.emoji}</span>${p.img ? `<img src="${esc(p.img)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</div>
+    <div>
+      <div class="part-name">${esc(p.title)}</div>
+      <div class="price">${esc(p.offer)}</div>
+    </div>
+    <a class="btn" href="${esc(link(p))}" target="_blank" rel="sponsored nofollow noopener">Buy on Amazon</a>
+  </div>`;
+
+const lookHTML = (l, who) => `
+  <article class="look">
+    <div class="combo">
+      <h3>${esc(l.name)}</h3>
+      <p class="sub">${esc(l.note || "")}</p>
+      ${l.parts.map(p => partHTML(p, l.bg)).join("")}
+    </div>
+    <div class="photo" style="background:${l.bg}" role="img" aria-label="${esc(who)} wearing the ${esc(l.name)} outfit">
+      <span aria-hidden="true">${l.parts.slice(0,3).map(p => p.emoji).join("")}</span>
+      <small>Photo: ${esc(l.img)}</small>
+      <img src="${esc(l.img)}" alt="${esc(who)} wearing: ${esc(l.parts.map(p => p.title).join(", "))}" loading="lazy" onerror="this.remove()">
+    </div>
+  </article>`;
+
+document.getElementById("picks").innerHTML = ["women","men"].map(k => `
+  <section class="side" aria-labelledby="t-${k}">
+    <h2 class="side-title" id="t-${k}">${esc(OUTFITS[k].title)}</h2>
+    ${OUTFITS[k].looks.map(l => lookHTML(l, OUTFITS[k].title)).join("")}
+  </section>`).join("");
+document.getElementById("giveLink").href = GIVEAWAY_URL;
+</script>
+</body>
+</html>
